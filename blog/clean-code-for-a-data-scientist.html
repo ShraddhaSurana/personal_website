@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean Code For A Data Scientist | Shraddha Surana</title>
+    <meta name="description" content="Full article: Clean Code for a Data Scientist by Shraddha Surana." />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body data-page="blogs">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="../index.html" aria-label="Shraddha Surana home">
+          <img src="../assets/images/logo.svg" alt="Shraddha Surana logo" />
+        </a>
+        <button class="mobile-menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">
+          Menu
+        </button>
+        <nav class="main-nav" id="main-navigation" data-nav>
+          <ul>
+            <li><a href="../index.html" data-nav-link data-page="home">Home</a></li>
+            <li><a href="../about.html" data-nav-link data-page="about">About Me</a></li>
+            <li><a href="../blogs.html" data-nav-link data-page="blogs">My Blogs</a></li>
+            <li><a href="../publications.html" data-nav-link data-page="publications">Publications</a></li>
+            <li><a href="../art.html" data-nav-link data-page="art">My Art</a></li>
+            <li><a href="../contact.html" data-nav-link data-page="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section data-reveal>
+          <p class="kicker">Blog</p>
+          <h1>CLEAN CODE FOR A DATA SCIENTIST (?)</h1>
+          <p class="lead">Originally published on the current site. Full text preserved.</p>
+        </section>
+
+        <section data-reveal>
+          <article class="article-wrap">
+            <figure class="article-media">
+              <img src="../assets/images/legacy/blog-clean-code.jpeg" alt="Clean Code for a Data Scientist" />
+            </figure>
+
+            <p>
+              "I'm a Data Scientist.. I don't need to write clean code because most of my code is
+              throwaway anyways". "Clean code and agile are good for developing softwares.. It does
+              not make sense in my work". The number of times I have heard the above and the
+              reluctance to even try some of the suggestions on clean code, baffles me.
+            </p>
+            <p>
+              Well, let me tell you.. you don't need to write clean code for software development
+              either. You don't need to practice agile for software development either. One can make
+              a perfectly working software even without the above (maintaining, modifying, scaling
+              will get difficult. But that's not the focus of this article). When you need to follow
+              clean code practices is when you are working in a TEAM. Irrespective of whether you
+              are developing a software or an algorithm or have to try out multiple algorithms.
+            </p>
+            <p>
+              The basic idea of clean code is that your fellow team members should be able to
+              understand what you have written. This is especially important in data science. As a
+              scientist your experiments <strong>must be reproducible. Must be verifiable.</strong>
+              That means others on your team should be able to understand and reproduce your
+              results.
+            </p>
+            <p>
+              We exist in a team. It is impossible to be a data scientist by yourself. Most of the
+              times in industry you would be working in applied sciences. This means you have to
+              understand someone else's problem and they (team, business folks) too need to
+              understand your solution.
+            </p>
+            <p>
+              As a data scientist you would have frequent interactions with the following members
+              (not limited to) of the team:
+            </p>
+            <p>
+              - Other data scientist/data analyst - collaborate with other data scientist on
+              algorithms, models, interpreting the results, feature engineering, etc.
+            </p>
+            <p>
+              - Data engineers - you don't want to end up processing all the data yourself. Queries
+              can be optimized by data engineers to get your consolidated results in a minimal time.
+              They need to understand what data you need.
+            </p>
+            <p>
+              - Business Analyst (BA)/Domain expert - what do your results mean in business terms.
+              There will be a need to understand with the BAs, as to what your input variables mean
+              and what impact your results will have on the business. To essentially understand the
+              domain.
+            </p>
+            <p>
+              Now that we have established that collaboration is important for a data scientist,
+              let's talk about the ways it can become effective via code. These are the low hanging
+              fruits:
+            </p>
+            <p>
+              <strong>1. Meaningful names</strong> - Your team members should not have to ask you
+              what a variable means. Use names that make it very clear what the intention is. It is
+              ok to have a long name. The solution to that is using better editors (by which you
+              don't have to type the whole variable name every time) and not shorten the name
+              thereby making it cryptic. Also, no magic numbers please.
+            </p>
+            <p>
+              <strong>2. Avoid mental mapping</strong> - you know in your head which parameters in
+              your code need to be changed to obtain desired result. Others don't. If you have to
+              remember all the variables that need to be changed simultaneously, then you are
+              wasting a lot of the team's time. Someone (including you) is going to run the code
+              forgetting to change one of the variables. This means the run was a waste and the code
+              will need to rerun. Considering the time some algorithms take, this should be a NO NO.
+            </p>
+            <p>
+              <strong>3. Don't have multiple names for the same thing.</strong> Once you decide as a
+              team, stick to it.
+            </p>
+            <p>
+              <strong>4. Use business domain names.</strong> Keep your creativity to engineer
+              features, analyzing, creating models. Don't invent names.
+            </p>
+            <p>
+              <strong>5. Comments become obsolete very soon.</strong> Code always tells the truth.
+              Hence, comments are normally discouraged. Same applies to data science code as well.
+              However, I would make an exception here - add comments that reveal your intention of
+              using or not using certain models/features. It is ok to comment: "This is going to
+              take 5 hours" or "Using SVM with Radial basis kernel for faster convergence".
+            </p>
+            <p>
+              <strong>6. Modularize your code.</strong> It is not easy to understand one big blob.
+              No matter how well it is mapped in your head right now. You will take time to
+              understand it later. Others will take time to understand it. Why? Because one has to
+              go through each and every line of the code to understand what it is doing. When you
+              create functions that do exactly what their name says, one need not go through each
+              line inside it. The reader will still understand what is being done.
+            </p>
+            <p>
+              <strong>7. Don't repeat yourself!</strong> Do not copy and paste those lines of code
+              because you need the exact same thing somewhere else too. Extract it in a function and
+              reuse that function. This ensures consistency.
+            </p>
+            <p>
+              <strong>8. Unit tests</strong> - Yes, they are very much relevant to data science
+              code. Data science code is still code. Testing your functions that spit out numbers
+              based on which business decisions will be taken becomes ever more paramount. Why would
+              you not think of testing your functions that can have so many repercussions? All your
+              functions should be tested to make sure they are doing what you expect them to do.
+              Writing a function that identifies a stationary signal? Test it using a signal that is
+              stationary and make sure your function returns it as such.
+            </p>
+            <p>
+              <strong>9. Formatting</strong> - Decide the formatting you as a team want to follow.
+              This includes using spaces vs tabs for indents, directory structure, file naming
+              conventions, output results format, etc. I am all for trying out various
+              approaches/models in a quick and dirty manner. This is very effective to understand
+              how much and in what direction one should invest time. But once you finalize your
+              approach and incorporate it in your working code, clean it up. All the above concepts
+              help people work as a team. I find it useful even if I am working solo. It helps me
+              understand my work later. It positions me to explain my results and allows me to cross
+              examine surprising (or shocking) results quickly.
+            </p>
+            <p>
+              The Clean Code book does a fantastic job of explaining all and more of the points
+              mentioned above. So, if you are a data scientist and are going to work in a team,
+              please read and implement clean code :) Every scientist has their own rules. But when
+              working in a team, the team has rules.
+            </p>
+
+            <div class="button-row">
+              <a class="button secondary" href="../blogs.html">Back To Blogs</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Copyright 2026 Shraddha Surana. All rights reserved.</p>
+        <p>
+          <a href="mailto:shraddha.surana@gmail.com">shraddha.surana@gmail.com</a> |
+          <a href="https://orcid.org/0000-0002-3009-3178" target="_blank" rel="noopener noreferrer">ORCID: 0000-0002-3009-3178</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
